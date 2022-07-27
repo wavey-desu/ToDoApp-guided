@@ -56,7 +56,8 @@ app.get("/", function(req, res) {
    else{
      res.render("list", {
       listTitle: "today",
-      newListItems: foundItems});
+      newListItems: foundItems
+    });
 
    }
   })
@@ -107,7 +108,7 @@ app.post("/", function(req, res){
     })
   }
 });
-
+ 
 app.post("/delete", function(req,res){
   const checkedItem = req.body.checkbox
   const listName = req.body.listName
